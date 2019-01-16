@@ -11,7 +11,7 @@ class client_1c::params {
  '1c-enterprise83-ws-nls'
 ]
 	$file_suffix	   = '_8.3.10-2580_amd64.deb'
-	$package_ensure    = 'present'
+	$package_ensure    = 'installed'
         $ftp_server_name   = 'ftp://astra.am.local/1C'
 	$run_script_1c     = 'install-AstraSE15x64-1c.sh'
 

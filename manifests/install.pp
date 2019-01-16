@@ -6,7 +6,7 @@ class client_1c::install(
 	
 	$package_name_local.each | $index_local, $value_local | {
          package { "$value_local":
-	           ensure   => installed,
+	           ensure   => $package_ensure,
                    provider => dpkg,
                    source   => "/tmp/$value_local$file_suffix",
                  }

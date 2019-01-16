@@ -1,0 +1,18 @@
+{
+  "name": "litvin-client_1c",
+  "version": "0.1.0",
+  "author": "litvin",
+  "summary": "This puppet module will install 1C client",
+  "license": "Apache-2.0",
+  "source": "https://github.com/litvin/puppet-1c.git",
+  "project_page": "https://github.com/litvin/puppet-1c",
+  "issues_url": "https://github.com/litvin/puppet-1c/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+

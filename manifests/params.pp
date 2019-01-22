@@ -12,7 +12,7 @@ class client_1c::params {
 ]
 	$file_suffix	   = '_8.3.10-2580_amd64.deb'
 	$package_ensure    = 'installed'
-        $ftp_server_name   = 'ftp://astra.am.local/1C'
+        $ftp_server_name   = 'ftp://astra.am.local/install'
 	$run_script_1c     = 'install-AstraSE15x64-1c.sh'
 
 }

@@ -14,12 +14,12 @@ class client_1c::downloads(
 #	        }	
 
 	archive { "/tmp/$package_name_download":
-			path          => "/tmp/${package_name_download}",
+			path          => "/tmp/1c/${package_name_download}",
 			source        => "$ftp_server_name/$package_name_download",
 			ensure   	   => present,
 			extract            => true,
 			extract_command	   => 'tar xfvz %s ',
-			extract_path       => '/tmp',
+			extract_path       => '/tmp/1c',
 			cleanup            => true,
 		}
 

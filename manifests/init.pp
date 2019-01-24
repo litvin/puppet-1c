@@ -46,7 +46,8 @@ class client_1c (
  String $package_name_wget  = $::client_1c::params::package_name_wget,
  Array[String] $package_name_local = $::client_1c::params::package_name_local,
  String $file_suffix               = $::client_1c::params::file_suffix,
- String $package_ensure            = $::role::buh::package_ensure,
+# String $package_ensure            = $::role::buh::package_ensure,
+ String $package_ensure            = $::client_1c::params::package_ensure,
  String $run_script_1c	 	   = $::client_1c::params::run_script_1c,
 
 ) inherits ::client_1c::params {

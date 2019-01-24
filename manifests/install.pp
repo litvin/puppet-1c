@@ -4,18 +4,25 @@ class client_1c::install(
 	String $package_ensure             = $::client_1c::package_ensure,
 ){
 	
+case $::osfamily {
+    'Debian': {
 	$package_name_local.each | $index_local, $value_local | {
-         package { "$value_local":
-	           ensure   => $package_ensure,
-                   provider => dpkg,
-                   source   => "/tmp/$value_local$file_suffix",
-                 }
-	}
-   
-	exec { 'apt-get install -f':
-		    command     => '/usr/bin/apt-get install -f -y',
-		    unless 	=> '/usr/bin/dpkg -l | grep libwebkitgtk-1.0-0 2>/dev/null',
-	}
-	
+	   exec { "install_$value_local" :
+			command => "dpkg --force-all -i /tmp/1c/$value_local$file_suffix",
+			path => "/usr/bin:/bin",
+			unless => "dpkg -l | grep $value_local" ,
+		}
+	       }
+	     }
+    'Redhat': {
+	$package_name_local.each | $index_local, $value_local | {
+	   exec {"install_$value_local":
+			command => "rpm -U /tmp/1c/$value_local$file_suffix --nodeps",
+			path => "/usr/bin",
+			onlyif => "rpm -q $value_local | grep 'не установлен'" ,
+		}
+	   }
+     	}
+    }	
 }
 

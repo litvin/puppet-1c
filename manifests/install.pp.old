@@ -1,7 +1,7 @@
-class client_1c::install(
-	Array[String] $package_name_local  = $::client_1c::package_name_local,
-	String $file_suffix		   = $::client_1c::file_suffix,
-	String $package_ensure             = $::client_1c::package_ensure,
+class client1c::install(
+	Array[String] $package_name_local  = $::client1c::package_name_local,
+	String $file_suffix		   = $::client1c::file_suffix,
+	String $package_ensure             = $::client1c::package_ensure,
 ){
 	
 	$package_name_local.each | $index_local, $value_local | {

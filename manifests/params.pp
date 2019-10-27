@@ -1,5 +1,5 @@
-class client_1c::params {
-        $ftp_server_name   = 'ftp://astra.am.local/install'
+class client1c::params {
+        $ftp_server_name   = 'http://ftp/install'
 	$package_ensure    = 'installed'
 
 	case $::osfamily {

@@ -1,7 +1,7 @@
-class client_1c::downloads(
-	String	 $package_name_download = $::client_1c::package_name_wget,
-	String   $ftp_server_name	= $::client_1c::ftp_server_name,
-	String   $file_suffix	        = $::client_1c::file_suffix,
+class client1c::downloads(
+	String	 $package_name_download = $::client1c::package_name_wget,
+	String   $ftp_server_name	= $::client1c::ftp_server_name,
+	String   $file_suffix	        = $::client1c::file_suffix,
 ){
 #        include wget
 	
